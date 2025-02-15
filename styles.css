@@ -1,0 +1,185 @@
+@font-face {
+  font-family: "Norse";
+  src: url("/fonts/Norse-Bold.otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bg {
+  background-image: url("/images/background/background.webp");
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.bg figure figcaption a {
+  color: white;
+}
+
+.content-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00000054;
+  width: 100%;
+  height: 120px;
+  margin-top: 20%;
+}
+
+.logo-text {
+  font-family: "Norse", "Franklin Gothic Medium", "Arial Narrow", Arial,
+    sans-serif;
+  color: white;
+  font-size: 4rem;
+}
+
+
+
+.container-register {
+  box-sizing: content-box;
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(240, 236, 231, 0.774);
+}
+
+.container-text {
+  box-sizing: content-box;
+  margin: 0 20px;
+}
+
+.container-text p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.form-content {
+  background-color: rgba(255, 255, 255, 0.719);
+  padding: 1rem;
+  margin: 0;
+  border: none;
+  box-shadow: 2px 2px 5px #48529944;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.title-form {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #666;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  justify-items: center;
+  gap: 10px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 65px;
+  max-width: 350px;
+}
+
+.item-label {
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.item-input {
+  height: 25px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transform: border 0.3s ease-in-out;
+}
+
+.item-input:focus {
+  border-color: blue;
+  outline: none;
+}
+
+.item-input:user-invalid {
+  border-color: red;
+}
+
+.item-input:user-valid {
+  border-color: green;
+}
+.item-input:user-invalid + span::after {
+  content: " ❌ Campo inválido";
+
+  color: #dc2626;
+  margin-left: 5px;
+}
+
+.container-btn {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  padding-left: 30px;
+  box-sizing: border-box;
+}
+
+.container-btn button {
+  background-color: #596d48;
+  border: none;
+  border-radius: 10px;
+  height: 40px;
+  padding: 0 25px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.container-btn button:hover {
+  background-color: #48553c;
+  height: 45px;
+  padding: 15px 30px;
+  transition: all 0.3s;
+}
+
+.container-redirect {
+  padding-left: 30px;
+}
+.container-redirect p a {
+  color: #48553c;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  main {
+    flex-direction: column;
+  }
+}

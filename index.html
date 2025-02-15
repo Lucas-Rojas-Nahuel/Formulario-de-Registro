@@ -1,12 +1,145 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
-</head>
-<body>
-    <h3>hola mundo</h3>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preload" href="/images/background/background.webp" as="image" />
+    <meta
+      name="description"
+      content="Ejercicio práctico de HTML y CSS intermedio basado en The Odin Project. Aprende sobre maquetación, estilos y diseño responsivo."
+    />
+    <title>Sing Up - Odin Project</title>
+  </head>
+  <body>
+    <main>
+      <section class="bg">
+        <header class="content-logo">
+          <img
+            height="100"
+            width="75"
+            src="/images/logos/odin-logo.webp"
+            alt="Odin Project Logo"
+          />
+          <h1 class="logo-text">ODiN</h1>
+        </header>
+        <figure>
+          <figcaption>
+            Photo by <a href="#">Halie West</a> on <a href="#">Unsplash</a>
+          </figcaption>
+        </figure>
+      </section>
+
+      <section class="container-register">
+        <div class="container-text">
+          <p>
+            This is not a real online service! You know you need something like
+            in your life to help tou realize your deepest dreams. Sing up
+            <i>now</i> to get started.
+          </p>
+          <p>You <i>know</i> you want to.</p>
+        </div>
+
+        <div class="container-form">
+          <form action="#" method="POST">
+            <fieldset class="form-content">
+              <h2 class="title-form">Let's do this!</h2>
+
+              <div class="grid">
+                <div class="item">
+                  <label class="item-label" for="name">First Name</label>
+                  <input
+                    class="item-input"
+                    type="text"
+                    name="name"
+                    id="name"
+                    required
+                    minlength="3"
+                  />
+                  <span></span>
+                </div>
+
+                <div class="item">
+                  <label class="item-label" for="lastName">Last Name</label>
+                  <input
+                    class="item-input"
+                    type="text"
+                    name="lastName"
+                    id="lastName"
+                    required
+                    minlength="3"
+                  />
+                  <span></span>
+                </div>
+
+                <div class="item">
+                  <label class="item-label" for="email">Email</label>
+                  <input
+                    class="item-input"
+                    type="email"
+                    name="email"
+                    id="email"
+                    required
+                  />
+                  <span></span>
+                </div>
+
+                <div class="item">
+                  <label class="item-label" for="phoneNumber"
+                    >Phone number</label
+                  >
+                  <input
+                    class="item-input"
+                    type="tel"
+                    name="phoneNumber"
+                    id="phoneNumber"
+                    pattern="[0-9]{10}"
+                    placeholder="Enter 10 digits"
+                    required
+                  />
+                  <span></span>
+                </div>
+
+                <div class="item">
+                  <label class="item-label" for="password">Password</label>
+                  <input
+                    class="item-input"
+                    type="password"
+                    name="password"
+                    id="password"
+                    minlength="6"
+                    required
+                  />
+                  <span></span>
+                </div>
+
+                <div class="item">
+                  <label class="item-label" for="confirmPassword"
+                    >Confirm Password</label
+                  >
+                  <input
+                    class="item-input"
+                    type="password"
+                    name="confirmPassword"
+                    id="confirmPassword"
+                    minlength="6"
+                    required
+                  />
+                  <span></span>
+                </div>
+              </div>
+            </fieldset>
+            <div class="container-btn">
+              <button type="submit" aria-label="Create Account">
+                Create Account
+              </button>
+            </div>
+          </form>
+          <div class="container-redirect">
+            <p>Already have an account? <a href="#">Log in</a></p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
