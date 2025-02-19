@@ -18,6 +18,8 @@ main {
   width: 100%;
   display: flex;
   align-items: center;
+  box-sizing: content-box;
+  overflow: hidden;
 }
 
 .bg {
@@ -55,16 +57,14 @@ main {
   font-size: 4rem;
 }
 
-
-
 .container-register {
-  box-sizing: content-box;
-  height: 100%;
+  height: 100vh;
   flex: 1;
   display: flex;
+
   flex-direction: column;
-  justify-content: center;
-  background-color: rgba(240, 236, 231, 0.774);
+  background-color: #eee7dec5;
+  overflow-y: scroll;
 }
 
 .container-text {
@@ -90,16 +90,16 @@ main {
 }
 
 .title-form {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.1rem;
   font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: #666;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
   justify-items: center;
   gap: 10px;
 }
@@ -138,7 +138,7 @@ main {
   border-color: green;
 }
 .item-input:user-invalid + span::after {
-  content: " ❌ Campo inválido";
+  content: " ❌ Invalid Field";
 
   color: #dc2626;
   margin-left: 5px;
@@ -160,26 +160,72 @@ main {
   padding: 0 25px;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: all 0.3s;
 }
 
 .container-btn button:hover {
   background-color: #48553c;
-  height: 45px;
-  padding: 15px 30px;
+  transform: scale(0.9);
   transition: all 0.3s;
 }
 
 .container-redirect {
   padding-left: 30px;
+  font-size: 20px;
 }
 .container-redirect p a {
-  color: #48553c;
-  text-decoration: none;
+  font-size: 20px;
+  color: #085417;
+}
+
+.container-redirect p a:visited{
+  color: rgb(131, 32, 131);
 }
 
 @media (max-width: 900px) {
   main {
     flex-direction: column;
+    background: url("/images/background/background.webp");
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    overflow-y: scroll;
   }
+
+  .bg,
+  .container-register {
+    background: none;
+  }
+
+  .content-logo {
+    margin: 0;
+
+    width: 100vw;
+  }
+
+  .bg figure {
+    display: none;
+  }
+
+  .container-text p {
+    color: #ccc;
+    font-size: 1rem;
+  }
+
+  .container-register {
+    overflow-y: visible;
+    height: fit-content;
+  }
+
+  .container-redirect p {
+    color: #ccc;
+  }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+
+  .container-redirect p a {
+    color: #9ca09c;
+  }
+
 }
